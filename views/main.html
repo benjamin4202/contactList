@@ -1,0 +1,44 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Contact List</a>
+    </div>
+    <form class="navbar-search navbar-right">
+      <div class="form-group">
+        <div id="searchBox" class="input-group">
+        <input type="text" class="form-control" id="exampleInputAmount" placeholder="search..." ng-model="searchResult">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+<div class="container wrapper">
+  <div class="row">
+    <div class="col-md-3" ng-repeat="contact in contacts | filter: searchResult">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="contact-info-container">
+            <div class="contact-photo">
+              <img class="img-responsive center-block" ng-src=" {{ contact.profile_image }} " />
+            </div>
+            <div class="contact-info">
+              <div class="contact-icon">
+                <img ng-src=" {{ contact.icon }} " />
+              </div>
+              <span class="contact-name">{{ contact.name }}</span>
+              <div class="contact-job-company-container">
+                <span class="contact-job">{{ contact.job }}</span>
+                <span ng-if="contact.job && contact.company_name "> | </span>
+                <span class="contact-company">{{ contact.company_name }}</span>
+              </div>
+            <div class="contact-phone-email">
+              <span class="contact-phone">{{ contact.phone }}</span>
+              <span class="contact-email"><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

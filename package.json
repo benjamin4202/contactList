@@ -1,0 +1,7 @@
+{
+  "name": "contactsapp",
+  "version": "1.0.0",
+  "description": "Simple contacts list.",
+  "main": "main.js",
+  "author": "Benjamin Pruitt"
+}

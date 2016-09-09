@@ -1,0 +1,148 @@
+@color_1: #222;
+@color_2: #999999;
+
+body {
+	background-color: #C9C9C9;
+}
+.navbar-default {
+	background-color: #FFF;
+	h1 {
+		color: @color_1;
+	}
+	.navbar-search {
+		position: absolute;
+		margin-left: 561px;
+		margin-top: 8px;
+		width: 580px;
+		background: #FFF;
+	}
+}
+#searchBox {
+	width: 100%;
+	input {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		border-radius: 0;
+		border-right: none;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	.input-group-addon {
+		border-radius: 0;
+		background-color: #FFF;
+		border-left: none;
+		i {
+			color: @color_2;
+		}
+	}
+}
+.form-group {
+	width: 100%;
+}
+.wrapper {
+	padding-top: 75px;
+}
+.contact-info-container {
+	background-color: #FFF;
+	overflow: hidden;
+	margin-bottom: 10px;
+	padding: 10px;
+	min-height: 300px;
+}
+.contact-info {
+	height: 107px;
+	background-color: #FFF;
+	position: relative;
+	&:hover {
+		height: 157px;
+		margin-top: -50px;
+	}
+}
+.contact-icon {
+	img {
+		width: 75px;
+		height: 75px;
+		position: absolute;
+		top: -38px;
+		left: 5px;
+	}
+}
+.contact-photo {
+	img {
+		min-height: 245px;
+	}
+}
+.contact-name {
+	font-size: 30px;
+	position: absolute;
+	top: 40px;
+}
+.contact-job-company-container {
+	position: absolute;
+	top: 80px;
+	font-size: 12px;
+	color: @color_2;
+}
+.contact-phone-email {
+	position: absolute;
+	top: 120px;
+	color: @color_2;
+	a {
+		color: @color_2;
+	}
+}
+.contact-phone {
+	float: left;
+	width: 100%;
+}
+@media (min-width: 1200px) {
+	.navbar-default {
+		.navbar-search {
+			max-width: 750px;
+			background: none;
+		}
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.navbar-default {
+		.navbar-search {
+			max-width: 550px;
+			margin-left: 391px;
+			background: none;
+		}
+	}
+	.contact-name {
+		font-size: 24px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.navbar-default {
+		.navbar-search {
+			max-width: 450px;
+			margin-left: 271px;
+			background: none;
+		}
+	}
+	.contact-job-company-container {
+		font-size: 18px;
+	}
+	.contact-phone-email {
+		font-size: 18px;
+		top: 114px;
+	}
+}
+@media (max-width: 767px) {
+	.navbar-default {
+		.navbar-search {
+			margin-left: -15px;
+			width: 100%;
+			margin-top: 0;
+			padding: 30px;
+		}
+	}
+	.wrapper {
+		padding-top: 168px;
+	}
+}
