@@ -13,7 +13,20 @@
   </div>
 </nav>
 
-<div class="container wrapper">
+
+<div ng-show="!isLoaded" class="row loading">
+  <div class="col-md-12">
+    <img class="center-block" src="/images/loading.svg" />
+  </div>
+</div>
+
+ <div ng-show="apiError" class="row loading">
+  <div class="col-md-12">
+    <p>There was a problem connecting to the API. Please try again later.</p>
+  </div>
+</div>
+
+<div ng-show="isLoaded" class="container wrapper">
   <div class="row">
     <div class="col-md-3" ng-repeat="contact in contacts | filter: searchResult">
       <div class="row">

@@ -1,6 +1,10 @@
 body {
   background-color: #C9C9C9;
 }
+.loading {
+  margin-top: 200px;
+  text-align: center;
+}
 .navbar-default {
   background-color: #FFF;
 }

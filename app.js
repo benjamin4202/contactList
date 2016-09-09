@@ -1,3 +1,7 @@
+/* globals angular */
+
+"use strict";
+
 var app = angular.module("contactsApp", ['ngRoute']);
 
 app.config(function($routeProvider) {
